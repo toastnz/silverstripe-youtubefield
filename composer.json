@@ -11,7 +11,7 @@
 		}
 	],
 	"require": {
-		"silverstripe/framework": "^4 || ^5",
+		"silverstripe/framework": "^4 || ^5 || ^6",
 		"guzzlehttp/guzzle": "^7"
 	},
 	"autoload": {
@@ -25,5 +25,23 @@
 			"client"
 		],
 		"installer-name": "youtubefield"
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true,
+			"phpstan/extension-installer": true,
+			"silverstripe/vendor-plugin": true
+		},
+    "sort-packages": true
+	},
+	"require-dev": {
+		"cambis/silverstan": "^2.1",
+		"cambis/silverstripe-rector": "^2.1",
+		"phpstan/extension-installer": "^1.4",
+		"phpstan/phpstan": "^2.1",
+		"phpstan/phpstan-deprecation-rules": "^2.0",
+		"phpstan/phpstan-phpunit": "^2.0",
+		"phpunit/phpunit": "^9.5 || ^11.0",
+		"rector/rector": "^2.2"
 	}
 }

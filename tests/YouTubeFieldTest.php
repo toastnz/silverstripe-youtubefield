@@ -19,7 +19,7 @@ class YouTubeFieldTest extends SapphireTest
     function testID()
     {
         foreach ($this->videos as $v) {
-            $field = new YouTubeField('TestYouTubeField');
+            $field = YouTubeField::create('TestYouTubeField');
             $field->setValue($v);
             $this->assertEquals($field->dataValue(), $v);
             unset($field);
@@ -29,7 +29,7 @@ class YouTubeFieldTest extends SapphireTest
     function testLongURL()
     {
         foreach ($this->videos as $v) {
-            $field = new YouTubeField('TestYouTubeField');
+            $field = YouTubeField::create('TestYouTubeField');
             $field->setValue('https://www.youtube.com/watch?v=' . $v);
             $this->assertEquals($field->dataValue(), $v);
             unset($field);
@@ -39,7 +39,7 @@ class YouTubeFieldTest extends SapphireTest
     function testShortURL()
     {
         foreach ($this->videos as $v) {
-            $field = new YouTubeField('TestYouTubeField');
+            $field = YouTubeField::create('TestYouTubeField');
             $field->setValue('https://youtu.be/' . $v);
             $this->assertEquals($field->dataValue(), $v);
             unset($field);
@@ -49,7 +49,7 @@ class YouTubeFieldTest extends SapphireTest
     function testShortTimestampedURL()
     {
         foreach ($this->videos as $v) {
-            $field = new YouTubeField('TestYouTubeField');
+            $field = YouTubeField::create('TestYouTubeField');
             $field->setValue('https://youtu.be/' . $v . '?t=3s');
             $this->assertEquals($field->dataValue(), $v);
             unset($field);
@@ -59,7 +59,7 @@ class YouTubeFieldTest extends SapphireTest
     function testEmbedURL()
     {
         foreach ($this->videos as $v) {
-            $field = new YouTubeField('TestYouTubeField');
+            $field = YouTubeField::create('TestYouTubeField');
             $field->setValue('https://www.youtube.com/embed/' . $v);
             $this->assertEquals($field->dataValue(), $v);
             unset($field);
