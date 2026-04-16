@@ -11,7 +11,7 @@
 		}
 	],
 	"require": {
-		"silverstripe/framework": "^4 || ^5",
+		"silverstripe/framework": "^6",
 		"guzzlehttp/guzzle": "^7"
 	},
 	"autoload": {
