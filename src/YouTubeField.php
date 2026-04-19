@@ -34,7 +34,12 @@ class YouTubeField extends TextField
 
     public function dataValue()
     {
-        return self::url_parser($this->value);
+        return self::url_parser($this->value) ?: null;
+    }
+
+    public function setSubmittedValue($value, $data = null)
+    {
+        return $this->setValue($value ?? '', $data);
     }
 
     /**
